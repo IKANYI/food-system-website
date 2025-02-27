@@ -1,0 +1,66 @@
+/* General Styling */
+.top {
+  display: flex;
+  flex-wrap:nowrap ;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #015c36;
+  color: #fff;
+  padding: 12px 5%;
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+}
+
+/* Left Section */
+.left_top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info a, .info p {
+  margin: 0;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.info a:hover {
+  color: #ffcc00;
+}
+
+/* Right Section (Social Icons) */
+.right_top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social {
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.social:hover {
+  color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .left_top, .right_top {
+    justify-content: center;
+    gap: 15px;
+  }
+}

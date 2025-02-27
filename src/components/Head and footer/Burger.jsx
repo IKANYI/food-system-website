@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Rightnav from './Rightnav';
-import Logo from '../assets/logo.png';
+import Rightnav from './Rightnav.jsx';
+import Logo from '../../assets/images/logo.png';
 
 const ImageStyled = styled.div`
- width:7rem;
- img{
+ width:30%;
+ overflow:hidden;
+ height:20%;
+
+ img
  width:100%;
+ 
  }
 `
 
