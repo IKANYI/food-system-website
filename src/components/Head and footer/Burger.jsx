@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Rightnav from './Rightnav.jsx';
+import Rightnav from './RightNav.jsx';
 import Logo from '../../assets/images/logo.png';
 
 const ImageStyled = styled.div`
