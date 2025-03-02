@@ -8,12 +8,14 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 // Sample partner logos (replace with actual image URLs)
 const partnerLogos = [
-  { src: "../../assets/images/oack-logo.png", alt: "Partner organic agriculture centre of kenya" },
-  { src: "../../assets/images/pelum.png", alt: "Partner pelum kenya" },
-  { src: "../../assets/images/muranga.png", alt: "Partner murang'a county" },
-  { src: "../../assets/images/logo-kalro.png", alt: "Partner kalro" },
-  { src: "../../assets/images/UFSC-logo.jpg", alt: "Partner ufsc" },
+  { src: require("../../assets/images/demo.png"), alt: "Partner: Organic Agriculture Centre of Kenya" },
+  { src: require("../../assets/images/pelum.png"), alt: "Partner: Pelum Kenya" },
+  { src: require("../../assets/images/coffee.jpeg"), alt: "Partner: Murang'a County" },
+  { src: require("../../assets/images/logo-kalro.png"), alt: "Partner: KALRO" },
+  { src: require("../../assets/images/UFSC-logo.jpg"), alt: "Partner: UFSC" },
 ];
+
+const fallbackImage = "https://via.placeholder.com/150?text=Logo+Unavailable";
 
 const Section = styled.div`
   background: #ffffff;
@@ -34,7 +36,8 @@ const Title = styled.h2`
   text-align: left;
   background: #f0f0f0;
   padding: 1rem;
-  width: 250px;
+  max-width: 80%;
+  margin: auto;
 `;
 
 const StyledSwiper = styled(Swiper)`
@@ -45,12 +48,19 @@ const StyledSwiper = styled(Swiper)`
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
   }
 
-  img {
+  .swiper-slide img {
     max-width: 150px;
     height: auto;
     object-fit: contain;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+
+  .swiper-slide:hover img {
+    transform: scale(1.05);
   }
 `;
 
@@ -68,10 +78,15 @@ const PartnersCarousel = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         loop={true}
+        aria-label="Partner logos carousel"
       >
         {partnerLogos.map((partner, index) => (
           <SwiperSlide key={index}>
-            <img src={partner.src} alt={partner.alt} />
+            <img
+              src={partner.src}
+              alt={partner.alt}
+              onError={(e) => (e.currentTarget.src = fallbackImage)}
+            />
           </SwiperSlide>
         ))}
       </StyledSwiper>
