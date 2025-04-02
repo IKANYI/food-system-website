@@ -6,87 +6,182 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// Sample partner logos (replace with actual image URLs)
 const partnerLogos = [
-  { src: require("../../assets/images/demo.png"), alt: "Partner: Organic Agriculture Centre of Kenya" },
-  { src: require("../../assets/images/pelum.png"), alt: "Partner: Pelum Kenya" },
-  { src: require("../../assets/images/coffee.jpeg"), alt: "Partner: Murang'a County" },
-  { src: require("../../assets/images/logo-kalro.png"), alt: "Partner: KALRO" },
-  { src: require("../../assets/images/UFSC-logo.jpg"), alt: "Partner: UFSC" },
+  { 
+    src: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587975/oack-logo_rvm3ik.png", 
+    alt: "Organic Agriculture Centre of Kenya",
+    name: "OACK"
+  },
+  { 
+    src: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587975/pelum_qknjk1.png", 
+    alt: "Pelum Kenya",
+    name: "PELUM Kenya"
+  },
+  { 
+    src: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587976/muranga_vvxail.png", 
+    alt: "Murang'a County",
+    name: "Murang'a County"
+  },
+  { 
+    src: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/logo-kalro_rzkxda.png", 
+    alt: "KALRO",
+    name: "KALRO"
+  },
+  { 
+    src: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587975/UFSC-logo_ksahjr.jpg", 
+    alt: "UFSC",
+    name: "UFSC"
+  },
 ];
 
 const fallbackImage = "https://via.placeholder.com/150?text=Logo+Unavailable";
 
-const Section = styled.div`
-  background: #ffffff;
-  padding: 2rem;
+const Section = styled.section`
+  background: #f8f9fa;
+  padding: 4rem 2rem;
   text-align: center;
-`;
-
-const TitleContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
+  position: relative;
 `;
 
 const Title = styled.h2`
-  color: green;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: left;
-  background: #f0f0f0;
-  padding: 1rem;
-  max-width: 80%;
-  margin: auto;
+  color: #2e7d32;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #7cb342;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 
 const StyledSwiper = styled(Swiper)`
-  width: 80%;
-  margin: auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
 
   .swiper-slide {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
-  }
-
-  .swiper-slide img {
-    max-width: 150px;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.3s ease;
+    padding: 1.5rem;
+    background: white;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    height: auto;
+    transition: all 0.3s ease;
   }
 
-  .swiper-slide:hover img {
-    transform: scale(1.05);
+  .swiper-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .partner-logo {
+    max-width: 180px;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: grayscale(1%);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-slide:hover .partner-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .partner-name {
+    color: #333;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #2e7d32;
+    background: rgba(255, 255, 255, 0.8);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .swiper-pagination-bullet {
+    background: #ccc;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #2e7d32;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    
+    .swiper-slide {
+      padding: 1rem;
+    }
+    
+    .partner-logo {
+      max-width: 120px;
+    }
   }
 `;
 
 const PartnersCarousel = () => {
   return (
-    <Section>
-      <TitleContainer>
-        <Title>OUR PARTNERS</Title>
-      </TitleContainer>
+    <Section aria-labelledby="partners-heading">
+      <Title id="partners-heading">Our Valued Partners</Title>
       <StyledSwiper
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={3}
         spaceBetween={30}
         navigation
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ 
+          delay: 3000, 
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         loop={true}
-        aria-label="Partner logos carousel"
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }}
       >
         {partnerLogos.map((partner, index) => (
           <SwiperSlide key={index}>
             <img
+              className="partner-logo"
               src={partner.src}
               alt={partner.alt}
               onError={(e) => (e.currentTarget.src = fallbackImage)}
+              loading="lazy"
             />
+            <span className="partner-name">{partner.name}</span>
           </SwiperSlide>
         ))}
       </StyledSwiper>

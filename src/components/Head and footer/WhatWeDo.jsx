@@ -68,15 +68,15 @@ const Button = styled.button`
 const services = [
   {
     title: "Livelihood",
-    image: "../src/assets/food.jpeg" // Replace with actual image path
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/enviro_ow6oum.jpg" // Replace with actual image path
   },
   {
     title: "Food and Nutritional Security",
-    image: "../src/assets/enviro.jpeg", // Replace with actual image path
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/coffee_pzirk7.jpg", // Replace with actual image path
   },
   {
     title: "Environmental Conservation",
-    image: "../src/assets/demo.jpeg", // Replace with actual image path
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587976/training_5_k5cqnb.jpg", // Replace with actual image path
   },
 ];
 
