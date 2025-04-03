@@ -133,7 +133,7 @@ const AboutUs = () => {
           
           <h3>Our Foundation</h3>
           <p>
-            The Community Food Systems Foundation (CFSF) is a Nairobi-based nonprofit organization established in 2017 to advance sustainable food systems in Kenya. We bridge the gap between agricultural research, education, and on-the-ground implementation to empower farmers and strengthen food security.
+            The Community Food Systems Foundation (CFSF) is a Kenyan-based nonprofit organization established in 2017 to advance sustainable food systems in Kenya. We bridge the gap between agricultural research, education, and on-the-ground implementation to empower farmers and strengthen food security.
           </p>
 
           <h3>Our Mission</h3>

@@ -136,7 +136,7 @@ const OurTeam = () => {
     {
       name: "Beatrice Muthoni Irungu",
       title: "Training Coordinator",
-      photo: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743674773/lsbvpcqfnevvoe6ef1ca.jpg",
+      photo: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743683936/passport_photo_eatzys.jpg",
       description: "Beatrice Irungu brings extensive expertise in organic farming education and farmer training. She holds a Diploma in Organic Agriculture from the Kenya Institute of Organic Farming (KIOF), where she specialized in sustainable crop production and soil management. Beatrice completed her professional internship at Grow Bio-Intensive Agriculture Centre of Kenya (GBIACK), gaining hands-on experience in biointensive farming techniques. As Training Coordinator at Community Food Systems Foundation, she designs and implements practical training programs that help small-scale farmers transition to organic methods. Her approach combines scientific organic farming principles with adaptable solutions for resource-limited farming communities across Kenya."
     },
     {
