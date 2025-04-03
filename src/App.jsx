@@ -10,7 +10,7 @@ import WhatWeDo from './components/Head and footer/WhatWeDo'
 import Impact from './components/Head and footer/Impact'
 import PartnersCarousel from './components/Head and footer/PartnersCarousel'
 import Footer from './components/Head and footer/Footer'
-import YouTubeProjects from './components/Head and footer/YoutubeProjects'
+import YouTubeProjects from './components/Head and footer/YouTubeProjects'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +23,7 @@ function App() {
       <Donation/>
       <AboutUs/>
       <WhatWeDo/>
-       <YouTubeProjects/>
+      <YouTubeProjects/>
       <Impact/>
       <PartnersCarousel/>
       <Footer/>
