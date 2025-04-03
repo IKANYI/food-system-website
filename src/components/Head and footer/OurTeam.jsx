@@ -134,6 +134,12 @@ const OurTeam = () => {
       description: "Mr. Patrick Njoroge has over two decades of experience in agriculture, working with both private and public institutions. He has worked with Mastermind Tobacco Kenya Ltd as the Area Leaf Growing Manager for Western Kenya, overseeing over 3,000 farmers. Additionally, he worked with Nyayo Tea Zones Development Corporation, a state-owned entity focused on environmental conservation. He currently serves as the CEO of Community Food Systems Foundation and as a lecturer at Chuka University's Department of Plant Science."
     },
     {
+      name: "Beatrice Muthoni Irungu",
+      title: "Training Coordinator",
+      photo: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743674773/lsbvpcqfnevvoe6ef1ca.jpg",
+      description: "Beatrice Irungu brings extensive expertise in organic farming education and farmer training. She holds a Diploma in Organic Agriculture from the Kenya Institute of Organic Farming (KIOF), where she specialized in sustainable crop production and soil management. Beatrice completed her professional internship at Grow Bio-Intensive Agriculture Centre of Kenya (GBIACK), gaining hands-on experience in biointensive farming techniques. As Training Coordinator at Community Food Systems Foundation, she designs and implements practical training programs that help small-scale farmers transition to organic methods. Her approach combines scientific organic farming principles with adaptable solutions for resource-limited farming communities across Kenya."
+    },
+    {
       name: "Meshack Waweru Itugi",
       title: "Field Officer",
       photo: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743430739/WhatsApp_Image_2025-03-31_at_16.06.10_lvoisr.jpg",
