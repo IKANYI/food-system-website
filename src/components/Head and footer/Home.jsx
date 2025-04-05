@@ -120,7 +120,7 @@ const contentArray = [
       "✔ Community nutrition programs",
       "✔ Food storage and distribution initiatives",
     ],
-    image: foodImage,
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/food_jgtitq.jpg",
     link: "#",
   },
   {
@@ -132,7 +132,7 @@ const contentArray = [
       "✔ Water-efficient irrigation systems",
       "✔ Livestock management training",
     ],
-    image: demoImage,
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/demo_fexxy4.jpg",
     link: "#",
   },
   {
@@ -144,7 +144,7 @@ const contentArray = [
       "✔ Soil and water conservation programs",
       "✔ Climate-smart agriculture techniques",
     ],
-    image: enviroImage,
+    image: 'https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/enviro_ow6oum.jpg',
     link: "#",
   },
   {
@@ -156,7 +156,7 @@ const contentArray = [
       "✔ Business and financial training",
       "✔ Youth and women empowerment programs",
     ],
-    image: coffeeImage,
+    image: "https://res.cloudinary.com/dklr77uyo/image/upload/v1743587974/coffee_pzirk7.jpg",
     link: "#",
   },
 ];

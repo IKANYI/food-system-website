@@ -13,11 +13,12 @@ const TopBar = styled.div`
   align-items: center;
   font-size: 0.9rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 650px) {
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
     text-align: center;
+    display: none;
   }
 `;
 
@@ -89,7 +90,7 @@ function Head() {
         
         <InfoItem>
           <Icon><MdOutlineMailOutline /></Icon>
-          <a href="mailto:info@cfsf.org" aria-label="Email CFSF">info@cfsf.org</a>
+          <a href="mailto:cfsfoundation1@yahoo.com" aria-label="Email CFSF">cfsfoundation1@yahoo.com</a>
         </InfoItem>
         
         <InfoItem>
