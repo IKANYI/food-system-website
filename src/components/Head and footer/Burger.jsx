@@ -60,7 +60,7 @@ const Burger = () => {
   return (
     <>
     <ImageStyled>
-     <img src="https://res.cloudinary.com/dklr77uyo/image/upload/v1743831167/new_logo_guj9k0.png" alt="logo" />
+     <img src="https://res.cloudinary.com/dklr77uyo/image/upload/v1743858802/new_logo_fi5bek.png" alt="logo" />
     </ImageStyled>
     
       <Burgerstyled open={open} onClick={() => setOpen(!open)}>
